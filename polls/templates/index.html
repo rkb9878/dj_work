@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block title %}Index{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'polls:results' %}">View All Data</a>
+    {% if latest_question_list %}
+        <h1>Find Detail</h1>
+        <ul>
+            {% for latest_question in latest_question_list %}
+                <li><a href="{% url 'polls:detail' latest_question.id %}">{{ latest_question.question_text }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available</p>
+    {% endif %}
+{% endblock content %}

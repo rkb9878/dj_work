@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block title %}Result{% endblock title%}
+
+
+{% block content %}
+    <a href="{% url 'polls:index' %}">Home</a>
+    <ul>
+        {% for datum in data %}
+            <li>{{ datum }}</li>
+            <ul>
+                {% if datum.choice_set.all %}
+                    {% for datum1 in datum.choice_set.all %}
+                        <li>{{ datum1 }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li style="color: red">Not Found</li>
+                {% endif %}
+            </ul>
+        {% endfor %}
+    </ul>
+{% endblock %}

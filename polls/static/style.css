@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(178,177,180,0.98) url("images/66787.jpg") no-repeat;
+    color: white;
+}
+a{
+    color: cyan;
+}
+li a {
+    color: green;
+}
