@@ -1,0 +1,7 @@
+### Django Work
+
+
+### Requirement 
+    
+      mysqlclient 2.0.1
+      django 3.8
